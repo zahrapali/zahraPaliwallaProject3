@@ -210,7 +210,7 @@ app.dropdownEventListener = function () {
                 let eachMovie = `
         <div class="piece">
           <h2>${movieObject.title}</h2>
-          <img src=${movieObject.url}/>
+          <img src=${movieObject.url} alt=${movieObject.alt}/>
           <p class="artist">${movieObject.rating}</p>
                   <p class="artist">${movieObject.watch}</p>
 
@@ -227,7 +227,7 @@ app.dropdownEventListener = function () {
                 let eachMovie = `
         <div class="piece">
           <h2>${movieObject.title}</h2>
-          <img src=${movieObject.url}/>
+          <img src=${movieObject.url} alt=${movieObject.alt}/>
           <p class="artist">${movieObject.rating}</p>
             <p class="artist">${movieObject.watch}</p>
 
@@ -260,7 +260,7 @@ app.dropdownEventListener = function () {
                 let eachMovie = `
         <div class="piece">
           <h2>${movieObject.title}</h2>
-          <img src=${movieObject.url}/>
+          <img src=${movieObject.url} alt=${movieObject.alt}/>
           <p class="artist">${movieObject.rating}</p>
         <p class="artist">${movieObject.watch}</p>
 
@@ -276,7 +276,7 @@ app.dropdownEventListener = function () {
                 let eachMovie = `
         <div class="piece">
           <h2>${movieObject.title}</h2>
-          <img src=${movieObject.url}/>
+          <img src=${movieObject.url} alt=${movieObject.alt}/>
           <p class="artist">${movieObject.rating}</p>
         <p class="artist">${movieObject.watch}</p>
 
