@@ -1,18 +1,20 @@
 //create a namespace object to represent our app
 const app = {};
-
+// create an array with objects to pull movie information and genres from 
 const genre = [
     // "classics"
      [
         {
             title: "A Christmas Story",
             url: "assets/best-christmas-movies-a-christmas-story-1566853992.jpg",
+            alt: 'Image of a boy with large black glasses',
             rating: "5 Stars",
             watch: "Prime Video"
         },
         {
             title: "It's a Wonderful Life", 
             url: "assets/best-christmas-movies-its-a-wonderful-life-1566932694.jpg",
+            alt: 'a family of five hugging',
             rating: "5 Stars",
             watch: "Netflix"
 
@@ -21,12 +23,14 @@ const genre = [
             title: "The Santa Clause",
             url: "assets/santa-clause-1566935957.jpg",
             rating: "5 Stars",
+            alt: 'man in a large red suit with a small boy next to him',
             watch: "Prime Video"
 
         },
         {
             title: "Disney's A Christmas Carol",
             url: "assets/christmascarole.jpg",
+            alt: 'an old man flying with a clock in the background',
             rating: "5 Stars",
             watch: "Disney+"
 
@@ -39,6 +43,7 @@ const genre = [
             title: "Christmas with the Kranks",
             url: "assets/christmaswiththekranks-en-121015-1598282349.jpg",
             rating: "5 Stars",
+            alt: 'a women and man looking suspicious',
             watch: "Netflix"
 
         },
@@ -46,6 +51,7 @@ const genre = [
             title: "Elf",
             url: "assets/best-christmas-movies-elf-1566934428.jpg",
             rating: "5 Stars",
+            alt: 'a tall man wearing an elf costume',
             watch: "Prime Video"
 
         },
@@ -53,6 +59,7 @@ const genre = [
             title: "The Santa Clause",
             url: "assets/santa-clause-1566935957.jpg",
             rating: "5 Stars",
+            alt: 'man in a large red suit with a small boy next to him',
             watch: "Prime Video"
 
         },
@@ -60,6 +67,7 @@ const genre = [
             title: "Home Alone",
             url: "assets/home-alone-1566932888.jpg",
             rating: "5 Stars",
+            alt: 'a boy with his hands on his face looking confused or scared',
             watch: "Disney+"
 
         }
@@ -71,6 +79,7 @@ const genre = [
         {
             title: "A Christmas Prince",
             url: "assets/christmas-prince-movie-poster-1604416503.jpg",
+            alt: 'a women and a man wearing fancy clothes',
             rating: "5 Stars",
             watch: "Nah,dont do it."
 
@@ -78,6 +87,7 @@ const genre = [
         {
             title: "Holidate",
             url: "assets/holidate.jpg",
+            alt: 'an women and a man looking confused with a christmass decoration in the back',
             rating: "5 Stars",
             watch: "Nah,dont do it."
 
@@ -85,12 +95,14 @@ const genre = [
         {
             title: "A Royal Christmas",
             url: "assets/a-royal-christmas-1576866783.jpg",
+            alt: 'a women in a long white dress on a long red staircase with a man in a fancy suit helping her walk down the stairs',
             rating: "5 Stars",
             watch: "Nah,dont do it."
 
         },
         {   title: "A Gingerbread Romance",
             url: "assets/gingerbread-romance-1576867512.jpg",
+            alt: 'a women watching a screen smiling with a kitchen and gingerbread house in the background ',
             rating:"5 Stars",
             watch: "Nah,dont do it."
 
@@ -101,6 +113,7 @@ const genre = [
         {
             title: "Lethal Weapon",
             url: "assets/best-christmas-movies-lethal-weapon-1566937900.jpg",
+            alt: 'a man with a yellow mask on',
             rating: "5 Stars",
             watch: "Netflix"
 
@@ -108,6 +121,7 @@ const genre = [
         {
             title: "3 Godfathers",
             url: "assets/3godfathers.jpg",
+            alt: 'three men in old timey clothes with guns',
             rating: "5 Stars",
             watch: "Prime Video"
 
@@ -115,6 +129,7 @@ const genre = [
         {
             title: "Joyeux Noel",
             url: "assets/joyeaxNoel.jpg",
+            alt: '3 men in military clothes walking',
             rating : "5 Stars",
             watch: "Netflix"
 
@@ -122,6 +137,7 @@ const genre = [
          {
             title: "Trading Places",
             url: "assets/best-christmas-movies-trading-places-1566936952jpg",
+            alt: 'skyline of a city and a man looking excited',
             rating: "5 Stars",
             watch: "Prime Video"
 
@@ -131,7 +147,9 @@ const genre = [
     [
          {
             title: "Frosty the Snowman",
-            url: "assets/christmaswiththekranks-en-121015-1598282349.jpg",
+            url: "assets/frostythesnowman.jpg",
+            alt: 'snowman with a top hat smoking with santa clause in the background',
+
             rating: "5 Stars",
             watch: "Disney+"
 
@@ -139,6 +157,7 @@ const genre = [
          {
             title: "Rudolph the Red-Nosed",
             url: "assets/rudolphthered.jpg",
+            alt: 'a deer with a red nose with a santa clause in the background',
             rating: "5 Stars",
             watch: "Disney+"
 
@@ -146,6 +165,7 @@ const genre = [
         {
             title: "Arthur Christmas",
             url: "assets/arthur.jpg",
+            alt: 'a man in a green sweater, snatascause, a child in blue pajams, and old man and a reindeer',
             rating: "5 Stars",
             watch: "Netflix"
 
@@ -153,6 +173,7 @@ const genre = [
          {
             title: "A Charlie Brown Christmas",
             url: "assets/charlie-brown.jpg",
+            alt: 'a small boy with a brown hat with a small white dog with a tree and little red house with lights in the background',
             rating: "5 Stars",
              watch: "Disney+"
 
@@ -176,13 +197,8 @@ const genre = [
 //     })
 // })
 
+// connect drop down menu selector with the correct array (objects) to present when it is selected// I tried to make this more clean by adding a const value, but I 
 
-//loop through the array that is passed to this method from the ajax response
-    //take the data from each art object in the array and render it on the page
-    
-//create a method which will hold an event listener
-//this event listener will listen for every time the user selects a new animal from the dropdown
-//(using function expressions here because we want to be confident about the value of "this" within the event listener)
 app.dropdownEventListener = function () {
     $('#movieType').on('change', function () {
         $('#artwork').empty();
@@ -208,7 +224,6 @@ app.dropdownEventListener = function () {
 
         if (chosenGenre === 'Hallmarky') {
             genre[2].forEach((movieObject) => {
-                // console.log(movieObject)
                 let eachMovie = `
         <div class="piece">
           <h2>${movieObject.title}</h2>
@@ -226,11 +241,10 @@ app.dropdownEventListener = function () {
 
         if (chosenGenre === 'Classics') {
             genre[0].forEach((movieObject) => {
-                // console.log(movieObject)
                 let eachMovie = `
         <div class="piece">
           <h2>${movieObject.title}</h2>
-          <img src=${movieObject.url}/>
+          <img src=${movieObject.url} alt=${movieObject.alt}/>
           <p class="artist">${movieObject.rating}</p>
         <p class="artist">${movieObject.watch}</p>
 
@@ -243,7 +257,6 @@ app.dropdownEventListener = function () {
         }
         if (chosenGenre === 'Adventure') {
             genre[3].forEach((movieObject) => {
-                // console.log(movieObject)
                 let eachMovie = `
         <div class="piece">
           <h2>${movieObject.title}</h2>
@@ -260,7 +273,6 @@ app.dropdownEventListener = function () {
         }
         if (chosenGenre === 'Cartoon') {
             genre[4].forEach((movieObject) => {
-                // console.log(movieObject)
                 let eachMovie = `
         <div class="piece">
           <h2>${movieObject.title}</h2>
@@ -280,24 +292,11 @@ app.dropdownEventListener = function () {
         
 
         
-//empty the container before adding new art to it!
-       
-//call summonArt method within the select event listener and pass in the animal that was chosen so the ajax request can be made with a new animal value as its query argument
-        // app.genre(chosenMovie);
-        //update the span within the h1 to reflect the animal whose art is on display
-        // $('.currentArtAnimal').text(chosenCreature);
+
         
     });
 }
-// //define a method which will initialize the app once the document is ready
-// app.init = () => {
-//     app.dropdownEventListener();
-// }
-// //check whether the document is ready
-// $(function () {
-//     //call the initialization method
-//     app.init();
-// });
 
+//call function
 
 app.dropdownEventListener();
